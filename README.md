@@ -84,3 +84,19 @@ alien --help
 alien --to-rpm my_pkg.deb
 
 ```
+
+### Kubernetes 
+
+* Metric spoon
+
+```
+kubectl top pod
+kubectl top node
+
+kubectl get --raw=/apis/metrics.k8s.io/v1beta1/nodes | jq # All nodes in the cluster
+kubectl get --raw=/apis/metrics.k8s.io/v1beta1/nodes/<NODE> # A specific node
+kubectl get --raw=/apis/metrics.k8s.io/v1beta1/pods  # All pods in the cluster
+kubectl get --raw=/apis/metrics.k8s.io/v1beta1/namespaces/<namespace>/pods # All pods in a specific namespace
+kubectl get --raw=/apis/metrics.k8s.io/v1beta1/namespaces/<namespace>/pods/<pod> # A specific pod
+
+```
