@@ -133,6 +133,26 @@ kubectl get --raw=/apis/metrics.k8s.io/v1beta1/namespaces/<namespace>/pods/<pod>
 
 ```
 
+* kubectl
+
+```
+kubectl config view 
+kubectl config set-context --current --namespace=<namespace>
+kubectl config get-contexts # Display list of contexts
+kubectl apply -f ./my-manifest.yaml # Create resource(s)
+kubectl logs <pod>
+kubectl exec <pod> -- ls / # Run command in existing pod (1 container case)
+kubectl top pod <pod> # Show metrics for a given pod and its containers
+kubectl create deployment nginx --image=nginx # Start a single instance of nginx
+kubectl get pods --all-namespaces # List all pods in all namespaces
+kubectl get services # List all services in the namespace
+kubectl get pod <pod> -o yaml # Get a pod's YAML
+kubectl describe pods <pod> # Describe commands with verbose output
+kubectl get pods --show-labels # Show labels for all pods 
+kubectl delete -f ./pod.json # Delete a pod using the type and name specified in pod.json
+
+```
+
 ### Metasploit
 
 ```
