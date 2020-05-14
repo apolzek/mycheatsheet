@@ -1,37 +1,22 @@
 # cheatxit
-📑 Cheat sheet for professionals working with technology
 
+📑 Cheat sheet for professionals working with technology
 
 ## Topics
 
 ### Python
 
 * Pipenv
+
 ```
-Create a new project using Python 3.7, specifically:
-$ pipenv --python 3.7
-
-Remove project virtualenv (inferred from current directory):
-$ pipenv --rm
-
-Install all dependencies for a project (including dev):
-$ pipenv install --dev
-
-Create a lockfile containing pre-releases:
-$ pipenv lock --pre
-
-Show a graph of your installed dependencies:
-$ pipenv graph
-
-Check your installed dependencies for security vulnerabilities:
-$ pipenv check
-
-Install a local setup.py into your virtual environment/Pipfile:
-$ pipenv install -e .
-
-Use a lower-level pip command:
-$ pipenv run pip freeze
-
+pipenv --python 3.7 # Create a new project using Python 3.7, specifically
+pipenv --rm # Remove project virtualenv 
+pipenv install --dev # Install all dependencies for a project (including dev)
+pipenv lock --pre # Create a lockfile containing pre-releases
+pipenv graph # Show a graph of your installed dependencies
+pipenv check # Check your installed dependencies for security vulnerabilities
+pipenv install -e . # Install a local setup.py into your virtual environment/Pipfile
+pipenv run pip freeze # Use a lower-level pip command
 ```
 
 * Use venv on Linux (Debian10)
@@ -46,6 +31,7 @@ pip install -r requirements.txt
 ### Linux
 
 * Check if port is in use on Linux
+
 ```
 cat /etc/services
 grep -w '443/tcp' /etc/services
@@ -55,7 +41,6 @@ sudo lsof -i -P -n | grep LISTEN
 sudo netstat -tulpn | grep LISTEN
 sudo lsof -i:22 ## See a specific port such as 22
 sudo lsof -nP -iTCP -sTCP:LISTEN
-
 sudo watch ss -tulpn
 sudo ss -tulw
 sudo ss -tulwn 
@@ -64,10 +49,20 @@ sudo ss -tulwn
 # -l : Show listening sockets. For example, TCP port 22 is opened by SSHD server.
 # -p : List process name that opened sockets
 # -n : Don’t resolve service names i.e. don’t use DNS
-
 sudo nmap -sT -O localhost
 sudo nmap -sU -O 192.168.2.13 # List open UDP ports
 sudo nmap -sT -O 192.168.2.13 # List open TCP ports 
+```
+
+* check and list active SSH connections in Linux
+
+```
+ss | grep -i ssh
+last -a | grep -i still
+who
+w
+netstat -tnpa | grep 'ESTABLISHED.*sshd'
+ps auxwww | grep sshd: | grep -v grep
 ```
 
 * dpkg/.deb
@@ -110,7 +105,6 @@ Depends: git, python3 (>=3.5), openjdk-8-jre-headless|openjdk-8-jre|openjdk-8-jd
 sudo apt install alien
 alien --help
 alien --to-rpm my_pkg.deb
-
 ```
 
 * PPA
@@ -197,7 +191,6 @@ kubectl delete -f ./pod.json # Delete a pod using the type and name specified in
 ```
 docker run -d --name konga --network host -p 1337:1337 pantsel/konga
 docker run -d --hostname my-rabbit --name rabbitlocal -p 8080:15672 -p 5672:5672 -p 25676:25676 rabbitmq:3-management
-
 ```
 
 
