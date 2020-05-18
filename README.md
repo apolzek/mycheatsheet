@@ -114,6 +114,23 @@ sudo add-apt-repository --remove ppa:<ppa_name>/ppa
 sudo ls /etc/apt/sources.list.d
 sudo rm -i /etc/apt/sources.list.d/<ppa_name.list>
 ```
+* Generate A Strong Password In Linux
+
+```
+openssl rand -base64 14 # 6iILGKjgCPc13mQo/jo=
+cat /dev/urandom | tr -dc a-zA-Z0-9 | fold -w 14 | head -n 1 # xGp9LIzsaoJcZ5
+< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-32};echo; # _e0EZFl48koBBqTCe4WT43jdXqq7NHQ1
+tr -cd '[:alnum:]' < /dev/urandom | fold -w30 | head -n1 # 0oZYBhvsqvJ9hPzCNg7zgskNaedXCm
+strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo # aiZEtYlkCgBUrBdZJKMr1wovgjM4Go
+< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c6 # Jzjyar
+dd if=/dev/urandom bs=1 count=32 2>/dev/null | base64 -w 0 | rev | cut -b 2- | rev # z2VFL+nCKNOlmxTucy9BhehzNqS/uGmAQEvDpubJHDk
+</dev/urandom tr -dc '12345!@#$%qwertQWERTasdfgASDFGzxcvbZXCVB' | head -c8; echo "" # xT%eV1WR
+
+sudo apt install pwgen
+pwgen 14 1 # AhchohNukoop8X
+
+```
+
 
 ### Git(github/gitlab)
 
