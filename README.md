@@ -198,6 +198,8 @@ kubectl get pod <pod> -o yaml # Get a pod's YAML
 kubectl describe pods <pod> # Describe commands with verbose output
 kubectl get pods --show-labels # Show labels for all pods 
 kubectl delete -f ./pod.json # Delete a pod using the type and name specified in pod.json
+kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces # PodxNode
+kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces | grep <node-name>
 
 ```
 
