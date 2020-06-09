@@ -186,6 +186,8 @@ kubectl get --raw=/apis/metrics.k8s.io/v1beta1/pods  # All pods in the cluster
 kubectl get --raw=/apis/metrics.k8s.io/v1beta1/namespaces/<namespace>/pods # All pods in a specific namespace
 kubectl get --raw=/apis/metrics.k8s.io/v1beta1/namespaces/<namespace>/pods/<pod> # A specific pod
 
+kubectl get nodes --no-headers | awk '{print $1}' | xargs -I {} sh -c 'echo {}; kubectl describe node {} | grep Allocated -A 5 | grep -ve Event -ve Allocated -ve percent -ve -- ; echo'
+
 ```
 
 * kubectl
