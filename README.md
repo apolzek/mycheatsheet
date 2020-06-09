@@ -30,6 +30,12 @@ pip install -r requirements.txt
 
 ### Linux
 
+* Find/ Remove
+
+```
+sudo find ./ -iname "<file-name>*" -exec rm {} \;
+```
+
 * Check if port is in use on Linux
 
 ```
