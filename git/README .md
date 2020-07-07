@@ -24,8 +24,11 @@ git merge <branchname>
 git diff <sourcebranch> <targetbranch>
 git tag 1.0.0 <commitID>
 git log
+```
 
-# Undo changes without confirming anything yet
+* Undo changes without confirming anything yet
+
+```
 git checkout -- . # Reverse all changes to files that were versioned
 git clean -f -d # Delete all created files and directories
 git reset HEAD . # If you add files to the index (using git add)
@@ -36,4 +39,12 @@ git reset --hard
 git clean -fd
 git reset --hard origin/master
 
+```
+* Renaming Git Branch
+
+```
+git checkout <old_name>
+git branch -m <new_name>
+git push origin -u <new_name>
+git push origin --delete <old_name>
 ```
