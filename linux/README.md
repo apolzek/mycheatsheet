@@ -114,3 +114,11 @@ pwgen 14 1 # AhchohNukoop8X
 curl -T my-local-file.txt ftp://ftp.example.com --user user:secret
 ftp-upload -h {HOST} -u {USERNAME} --password {PASSWORD} -d {SERVER_DIRECTORY} {FILE_TO_UPLOAD}
 ```
+
+* Passwordless SSH on Ubuntu and CentOS:
+
+```
+ssh-keygen -t rsa
+ssh-keygen -t rsa -b 4096
+ssh-copy-id <remote_user>@<remote_ip>
+```
