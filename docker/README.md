@@ -3,9 +3,9 @@
 
 ## Referências
 
-|Título                       | URL                                                        |
-|---------------------------------|------------------------------------------------------------|
-|Docker para desenvolvedores      | https://github.com/gomex/docker-para-desenvolvedores       |
+| Título                      | URL                                                  |
+|-----------------------------|------------------------------------------------------|
+| Docker para desenvolvedores | https://github.com/gomex/docker-para-desenvolvedores |
 
 
 ### Instalar Docker engine no GNU/Linux (sudo)
@@ -36,17 +36,17 @@ docker container run <parâmetros> <imagem> <CMD> <argumentos>
 
 Os parâmetros mais utilizados na execução do contêiner são:
 
-|Parâmetro   | Explicação                                                                     |
-|------------|--------------------------------------------------------------------------------|
-|-d          | Execução do contêiner em background                                            |
-|-i          | Modo interativo. Mantém o STDIN aberto mesmo sem console anexado               |
-|-t          | Aloca uma pseudo TTY                                                           |
-|--rm        | Automaticamente remove o contêiner após finalização (**Não funciona com -d**)  |
-|--name      | Nomear o contêiner                                                             |
-|-v          | Mapeamento de volume                                                           |
-|-p          | Mapeamento de porta                                                            |
-|-m          | Limitar o uso de memória RAM                                                   |
-|-c          | Balancear o uso de CPU                                                         | 
+| Parâmetro | Explicação                                                                    |
+|-----------|-------------------------------------------------------------------------------|
+| -d        | Execução do contêiner em background                                           |
+| -i        | Modo interativo. Mantém o STDIN aberto mesmo sem console anexado              |
+| -t        | Aloca uma pseudo TTY                                                          |
+| --rm      | Automaticamente remove o contêiner após finalização (**Não funciona com -d**) |
+| --name    | Nomear o contêiner                                                            |
+| -v        | Mapeamento de volume                                                          |
+| -p        | Mapeamento de porta                                                           |
+| -m        | Limitar o uso de memória RAM                                                  |
+| -c        | Balancear o uso de CPU                                                        |
 
 
 ```
@@ -67,12 +67,12 @@ docker container ls <parâmetros>
 
 Os parâmetros mais utilizados na execução do contêiner são:
 
-|Parâmetro   | Explicação|  
-|-----------|------------|
-|-a | Lista todos os contêineres, inclusive os desligados|
-|-l | Lista os últimos contêineres, inclusive os desligados|
-|-n | Lista os últimos N contêineres,  inclusive os desligados|
-|-q | Lista apenas os ids dos contêineres, ótimo para utilização em scripts|
+| Parâmetro | Explicação                                                            |
+|-----------|-----------------------------------------------------------------------|
+| -a        | Lista todos os contêineres, inclusive os desligados                   |
+| -l        | Lista os últimos contêineres, inclusive os desligados                 |
+| -n        | Lista os últimos N contêineres,  inclusive os desligados              |
+| -q        | Lista apenas os ids dos contêineres, ótimo para utilização em scripts |
 
 ```
 docker container stop meu_python
@@ -81,6 +81,10 @@ docker container start meu_python
 ```
 
 ---
+
+### Outros
+
+* Mais usados
 
 ```
 docker run -d --name konga --network host -p 1337:1337 pantsel/konga
