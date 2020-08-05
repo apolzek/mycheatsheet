@@ -129,3 +129,10 @@ hostname -I | awk '{print $1}'
 ```
 Name file manager
 xdg-mime query default inode/directory 
+
+
+* Recursos de maquina
+
+```
+ ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+````
