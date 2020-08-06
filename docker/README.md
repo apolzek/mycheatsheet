@@ -36,7 +36,7 @@ docker container run <parameters> <image> <CMD> <args>
 
 The parameters most used in the execution of the container are:
 
-| Parâmetro | Explicação                                                                         |
+| Parameter | Explanation                                                                         |
 |-----------|------------------------------------------------------------------------------------|
 | -d        | Container execution in the background                                              | 
 | -i        | Interactive mode. Keeps STDIN open even without a console attached                 |
