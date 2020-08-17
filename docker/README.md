@@ -1,5 +1,5 @@
 
-# Docker / Docker Swarm
+# Docker / Docker Swarm :whale2:
 
 ## References
 
@@ -126,7 +126,6 @@ docker rmi -f IMAGE_ID
 docker container run -v /var/lib/containerx:/var ubuntu
 ```
 
-
 ```
 docker create -v /dbdata --name dbdata postgres /bin/true
 docker container run -d --volumes-from dbdata --name db2 postgres
@@ -138,8 +137,6 @@ docker container run -d -v dbdata:/var/lib/data postgres
 ```
 
 * Network 
-
-
 
 ```
 #172.17.0.0/16
@@ -177,6 +174,8 @@ docker run busybox nslookup google.com
 ```
 
 ### Docker Swarm
+
+* Basic commands
 
 ```
 # Set up master
@@ -232,5 +231,14 @@ docker service ps --filter desired-state=running <service id|name>
 
 # Print console log of a service
 docker service logs --follow <service id|name>                       
+
+```
+
+### Most used services
+
+```
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+docker run -d --hostname my-rabbit --name rabbitlocal -p 8080:15672 -p 5672:5672 -p 25676:25676 rabbitmq:3-management
+docker run -d --name konga --network host -p 1337:1337 pantsel/konga
 
 ```
