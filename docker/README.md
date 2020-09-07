@@ -24,6 +24,12 @@ docker-machine version
 
 ### Basic commands
 ```
+# Version / Shows if you have client and server
+docker version 
+
+# Overview Docker on the machine
+docker info
+
 docker image list
 docker image pull python
 docker image inspect python
