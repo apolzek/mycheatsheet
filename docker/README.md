@@ -6,9 +6,17 @@
 | Title                       | URL                                                  |
 |-----------------------------|------------------------------------------------------|
 | Docker para desenvolvedores | https://github.com/gomex/docker-para-desenvolvedores |
+| Curso de Docker Completo  | [URL](https://www.youtube.com/playlist?list=PLg7nVxv7fa6dxsV1ftKI8FAm4YD6iZuI4)
 
+## Install Docker
+
+* https://docs.docker.com/get-docker/
+* https://docs.docker.com/compose/install/
+* https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/
+* https://docs.docker.com/machine/install-machine/
 
 ### Install Docker Engine on GNU / Linux (sudo required)
+
 ```
 wget -qO- https://get.docker.com/ | sh
 wget -qO- https://get.docker.com/gpg | sudo apt-key add -
@@ -70,11 +78,6 @@ docker container run -it --rm -c 512 python
 docker container ls <parameters>
 ```
 
-* Remove all containers
-```
-docker rm $(docker ps -a -q) -f
-```
-
 The parameters most used in the execution of the container are:
 
 | Parameter | Explanation                                                            |
@@ -84,6 +87,13 @@ The parameters most used in the execution of the container are:
 | -n        | Lists the last N containers, including disconnected ones              |
 | -q        | List only container ids, great for scripting                          |
 
+
+* Remove all containers
+```
+docker rm $(docker ps -a -q) -f
+```
+
+* Stop and Start containers
 ```
 docker container stop mypython
 docker container start mypython
@@ -125,7 +135,7 @@ docker images rm -f IMAGE_ID
 docker rmi -f IMAGE_ID
 ```
 
-* Volume
+* Volumes
 
 ```
 # Requires the host to have a specific folder for the container to function properly
