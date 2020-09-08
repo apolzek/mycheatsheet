@@ -181,6 +181,7 @@ docker container run -d --name h_none --network none nginx:alpine
 docker network create my_custom_net --subnet 192.168.134.0/24 --gateway 192.168.134.1
 docker container run --name webhost -d --network my_custom_net nginx
 docket network prune
+docker network connect NETWORK_NAME CONTAINER_ID_OR_NAME
 ```
 ---
 
