@@ -244,6 +244,9 @@ docker node demote <node id>
 # Rebalancing
 for svc in $(docker service ls -q) ; do docker service update $svc --force ; done
 
+# Force restart
+for i in $(docker service ls | grep 0/ | awk '{print $2}'); do docker service update --force $i; done
+
 docker stack ls
 docker stack rm <name>
 
