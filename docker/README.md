@@ -185,6 +185,13 @@ docker network connect NETWORK_NAME CONTAINER_ID_OR_NAME
 ```
 ---
 
+* Dockerhub 
+```
+docker build -t <your_username>/my-first-repo . 
+docker run <your_username>/my-first-repo
+docker push <your_username>/my-first-repo
+```
+
 ### Troubleshooting
 
 
@@ -201,7 +208,6 @@ docker run --dns 10.0.0.2 busybox nslookup google.com
     "dns": ["10.0.0.2", "8.8.8.8"]
 }
 sudo service docker restart
-docker run busybox nslookup google.com
 ```
 ---
 
