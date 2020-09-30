@@ -14,6 +14,7 @@ cat /etc/services
 grep -w '443/tcp' /etc/services
 egrep -w '22/(tcp|udp)' /etc/services
 
+fuser -k 8080/tcp
 sudo lsof -i -P -n | grep LISTEN
 sudo netstat -tulpn | grep LISTEN
 sudo lsof -i:22 ## See a specific port such as 22
