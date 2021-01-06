@@ -304,4 +304,5 @@ docker run -d --hostname my-rabbit --name rabbitlocal -p 8080:15672 -p 5672:5672
 docker run -d --name konga --network host -p 1337:1337 pantsel/konga
 docker run -d -p 3000:3000 --name grafana grafana/grafana:6.5.0
 docker run -it -v $PWD:/app -w /app --entrypoint "" hashicorp/terraform:light sh
+docker run -d --name db -p 8091-8094:8091-8094 -p 11210:11210 couchbasehttp://localhost:8091
 ```
