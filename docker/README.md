@@ -304,6 +304,7 @@ docker service logs --follow <service id|name>
 ```
 docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 docker run -d --hostname my-rabbit --name rabbitlocal -p 8080:15672 -p 5672:5672 -p 25676:25676 rabbitmq:3-management
+docker run --rm --name mongodb -p 27017:27017 mongo:latest
 docker run -d --name konga --network host -p 1337:1337 pantsel/konga
 docker run -d -p 3000:3000 --name grafana grafana/grafana:6.5.0
 docker run -it -v $PWD:/app -w /app --entrypoint "" hashicorp/terraform:light sh
