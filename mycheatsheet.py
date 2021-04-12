@@ -121,6 +121,11 @@ def md5_create(alias):
     return m.hexdigest()
 
 
+def call_manager(allargs):
+    print(allargs)
+    print(len(allargs))
+
+
 if __name__ == "__main__":
 
     ready_file = True if test_open_file() == 0 else create_file()
@@ -129,6 +134,12 @@ if __name__ == "__main__":
         pass
     else:
         sys.exit(2)
+
+
+
+    call_manager(sys.argv)
+
+    sys.exit(2)
 
     if(len(sys.argv) == 2):
         if(sys.argv[1] == "list"):
