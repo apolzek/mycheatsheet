@@ -11,21 +11,42 @@
 | Install docker-compose      |  https://docs.docker.com/compose/install/                                       |
 
 ### Commands
+
+#### Info
+
 ```
-# Version / Shows if you have client and server
+# Version(Client/Server)
 docker version 
 
 # Overview Docker on the machine
 docker info
-
-# Docker images
-docker image list
-docker image pull IMAGE_ID:tag
-> docker image pull python:latest
-docker image inspect IMAGE_ID (Ex: docker image inspect postgres:12.2)
 ```
 
-* Run container 
+#### Images
+
+```
+# Docker images
+docker image list
+docker image ls
+
+docker image pull <IMAGE_ID_OR_NAME>:<TAG>
+$ docker image pull python:2.7
+
+docker image inspect <IMAGE_ID_OR_NAME>
+$ docker image inspect python:2.7
+
+docker image history <IMAGE_ID_OR_NAME>:<TAG>
+$ docker image history python:latest
+
+docker image rm <IMAGE_ID_OR_NAME>:<TAG> -f
+$ docker image rm python:latest -f
+
+# Remove all images
+docker rmi -f $(docker images -a -q)
+```
+
+#### Container
+
 ```
 docker container run <parameters> <image> <CMD> <args>
 ```
@@ -55,7 +76,7 @@ docker container run -it --rm -m 512M python
 docker container run -it --rm -c 512 python
 ```
 
-* List containers
+
 ```
 docker container ls <parameters>
 ```
@@ -70,13 +91,14 @@ The parameters most used in the execution of the container are:
 | -q        | List only container ids, great for scripting             |
 
 
-* Remove all containers/images
+
 ```
+# Remove all containers/images
 docker rm $(docker ps -a -q) -f
-docker rmi -f $(docker images -a -q)
+
 ```
 
-* View container processes/ consume/ info
+* View container processes, consume and info
 ```
 docker container top ID_OR_NAME 
 docker container stats
