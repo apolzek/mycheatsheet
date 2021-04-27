@@ -177,8 +177,8 @@ docker inspect --format='{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} ->
 
 :heavy_dollar_sign: stop/start containers
 ```
-docker container stop mypython
-docker container start mypython
+docker container stop <CONTAINER_NAME_OR_ID>
+docker container start <CONTAINER_NAME_OR_ID>
 ```
 
 #### Dockerfile
