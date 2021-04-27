@@ -7,7 +7,7 @@
 |-----------------------------|---------------------------------------------------------------------------------|
 | Docs                        | https://docs.docker.com/                                                        |
 | Docker para desenvolvedores | https://github.com/gomex/docker-para-desenvolvedores                            |
-| Curso de Docker Completo    | [URL](https://www.youtube.com/playlist?list=PLg7nVxv7fa6dxsV1ftKI8FAm4YD6iZuI4) |
+| Curso de Docker Completo    | [Curso Docker(pt-br)](https://www.youtube.com/playlist?list=PLg7nVxv7fa6dxsV1ftKI8FAm4YD6iZuI4) |
 | Install docker-compose      |  https://docs.docker.com/compose/install/                                       |
 
 ### Commands
