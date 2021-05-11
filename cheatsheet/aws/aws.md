@@ -17,6 +17,8 @@ aws configure
 
 #### EKS
 
+:heavy_dollar_sign: fargate
+
 ```
 eksctl create cluster \
 --name my-cluster \
@@ -24,6 +26,9 @@ eksctl create cluster \
 --fargate
 
 ```
+
+:heavy_dollar_sign: managed
+
 ```
 aws ec2 create-key-pair --region us-west-2 --key-name myKeyPair
 
@@ -37,5 +42,6 @@ eksctl create cluster \
 ```
 
 ```
+# Delete cluster EKS
 eksctl delete cluster --name my-cluster --region us-west-2
 ```
