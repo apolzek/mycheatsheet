@@ -261,7 +261,13 @@ docker run <your_username>/artifact_name
 docker push <your_username>/artifact_name
 ```
 
----
+#### docker-compose
+
+```
+# Restart container stack
+docker kill -s HUP <name>
+```
+
 
 #### Troubleshooting
 
